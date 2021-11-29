@@ -11,7 +11,7 @@ public class hooks extends Base{
 
 
         {
-            System.setProperty("webdriver.chrome.driver", "/Users/phoenix/IdeaProjects/JupiterToys/src/test/java/resources/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/Users/phoenix/IdeaProjects/JupiterToys/src/test/resources/chromedriver");
 
             driver = new ChromeDriver();
 
