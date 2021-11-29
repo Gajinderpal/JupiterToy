@@ -9,10 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class CartPageSteps extends Base {
     @Given("user clicks on shop page on homepage")
     public void click_homepage() throws InterruptedException {
