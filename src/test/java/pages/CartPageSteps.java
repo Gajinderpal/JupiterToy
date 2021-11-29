@@ -14,30 +14,30 @@ public class CartPageSteps extends Base {
     public void click_homepage() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver,5);
         WebElement waitUntilPageLoad = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#nav-shop a")));
-        driver.findElement(By.cssSelector("#nav-shop a")).click();
+        driver.findElement(By.cssSelector("#nav-shop a")).click(); //click on shop page
         Thread.sleep(3000);
     }
 
     @And("user adds Funny Cow 2 times")
     public void adding_fuuny_cows() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/div/ul/li[6]/div/p/a")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/div/ul/li[6]/div/p/a")).click(); //add the funny cow toy
         driver.findElement(By.xpath("/html/body/div[2]/div/ul/li[6]/div/p/a")).click();
     }
 
     @And("user adds Fluffy bunny 1 time")
     public void adding_fluffy_bunny() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/div/ul/li[4]/div/p/a")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/div/ul/li[4]/div/p/a")).click(); //add the fluffy bunny toy
     }
 
     @And("user click on cart menu")
     public void click_cart() throws InterruptedException {
-        driver.findElement(By.cssSelector("#nav-cart a")).click();
+        driver.findElement(By.cssSelector("#nav-cart a")).click(); //clicks on cart menu
         Thread.sleep(3000);
     }
 
     @And("^verify total (.*) items are in cart$")
     public void verify_cart(Integer num) throws InterruptedException {
-        Assert.assertEquals(num.toString(),driver.findElement(By.cssSelector("body > div.container-fluid > div > p > span.cart-count.ng-binding")).getText());
+        Assert.assertEquals(num.toString(),driver.findElement(By.cssSelector("body > div.container-fluid > div > p > span.cart-count.ng-binding")).getText()); //asserts the items in the cart or not
     }
 
 }

@@ -13,7 +13,7 @@ public class hooks extends Base{
         {
             System.setProperty("webdriver.chrome.driver", "/Users/phoenix/IdeaProjects/JupiterToys/src/test/resources/chromedriver");
 
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(); //chrome driver initialiastion
 
 
             driver.manage().window().maximize();
@@ -21,7 +21,7 @@ public class hooks extends Base{
             driver.get("https://jupiter.cloud.planittesting.com/#/");
 
 
-            wait = new WebDriverWait(driver, 120);
+            wait = new WebDriverWait(driver, 120); //wait intialised
         }
 
 
