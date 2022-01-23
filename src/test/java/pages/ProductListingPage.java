@@ -15,7 +15,7 @@ public class ProductListingPage extends Base {
     }
     public static int totalCount = 0;
 
-    @FindBy(xpath = "//li[@id='product-1']//div//p//a")
+    @FindBy(xpath = "//li[@id='product-1']//div//p//a") //web elements of ProductListingPage
     private static WebElement teddyBearBuyButton;
     @FindBy(xpath = "//li[@id='product-2']//div//p//a")
     private static WebElement stuffedFrogBuyButton;
@@ -37,8 +37,8 @@ public class ProductListingPage extends Base {
         WaitUntilElementVisible(teddyBearBuyButton);
         teddyBearBuyButton.isEnabled();
         int i = 1;
-        while (i<=num){
-            switch (toyName.toLowerCase().trim()) {
+        while (i<=num){                                           //running while loop to add the quantity of the toys requested
+            switch (toyName.toLowerCase().trim()) {               //running switch over the toys to select the user's choice
                 case "teddybear" -> teddyBearBuyButton.click();
                 case "stuffedfrog" -> stuffedFrogBuyButton.click();
                 case "handmadedoll" -> handmadeDollBuyButton.click();

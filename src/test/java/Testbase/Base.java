@@ -15,11 +15,11 @@ public class Base {
         Base.wait=wait;
     }
 
-    protected void WaitUntilElementVisible(WebElement element){
+    protected void WaitUntilElementVisible(WebElement element){  //wait function for the elements to be appeared
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void mediumWait() throws InterruptedException {
+    public void mediumWait() throws InterruptedException {      //medium wait of 3 sec
         Thread.sleep(3000);
     }
 

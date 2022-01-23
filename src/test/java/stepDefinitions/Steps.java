@@ -56,7 +56,7 @@ public class Steps {
     }
 
     @And("^Customer submits \"(.*)\" \"(.*)\" \"(.*)\" and Successful acknowledgement message is displayed$")
-    public void customerSubmitsMandatoryMnformation(String forename, String email, String message) throws InterruptedException {
+    public void customerSubmitsMandatoryInformation(String forename, String email, String message) throws InterruptedException {
         contact = new ContactPage(driver,wait);
         contact.fillMandatoryInformation(forename,email,message);
         contact.clickOnSubmitButton();
