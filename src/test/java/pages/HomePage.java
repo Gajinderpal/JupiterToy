@@ -14,7 +14,7 @@ public class HomePage extends Base {
         PageFactory.initElements(
                 driver,this);
     }
-    @FindBy(css = "#nav-contact a")
+    @FindBy(css = "#nav-contact a")        //web elements of the Homepage
     private WebElement contactPageButton;
 
     @FindBy(css = "#nav-shop a")
@@ -23,14 +23,14 @@ public class HomePage extends Base {
     @FindBy(css = "#nav-cart a")
     private WebElement cartPageButton;
 
-    public void clickOn_ContactPage()
+    public void clickOn_ContactPage()     //function to click on the contact page button
     {
         WaitUntilElementVisible(contactPageButton);
         contactPageButton.isEnabled();
         contactPageButton.click();
     }
 
-    public void clickOn_ShopPage(){
+    public void clickOn_ShopPage(){       //function to click on the shop page button
         WaitUntilElementVisible(shopPageButton);
         shopPageButton.isEnabled();
         shopPageButton.click();

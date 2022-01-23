@@ -12,7 +12,7 @@ public class Hooks {
     public static void setup(){
         {
             System.setProperty("webdriver.chrome.driver", "/Users/phoenix/IdeaProjects/JupiterToys/src/test/resources/chromedriver");
-            driver = new ChromeDriver(); //chrome driver initialiastion
+            driver = new ChromeDriver(); //chrome driver initialization
             driver.manage().deleteAllCookies();
             driver.manage().window().maximize();
             driver.get("https://jupiter.cloud.planittesting.com/#/");

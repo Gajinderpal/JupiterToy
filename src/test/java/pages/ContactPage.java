@@ -18,7 +18,7 @@ public class ContactPage extends Base {
     }
     static String fName;
 
-    @FindBy(id = "forename")
+    @FindBy(id = "forename")                      //web elements of contact page
     private static WebElement foreNameTextField;
 
     @FindBy(id = "email")
@@ -33,7 +33,7 @@ public class ContactPage extends Base {
     @FindBy(className = "alert-success")
     private static WebElement alertMessage;
 
-    public void fillMandatoryInformation(String forename, String email, String message) throws InterruptedException {
+    public void fillMandatoryInformation(String forename, String email, String message) throws InterruptedException {  //function to add mandatory data
         WaitUntilElementVisible(foreNameTextField);
         foreNameTextField.sendKeys(forename);
         emailTextField.sendKeys(email);
@@ -48,6 +48,6 @@ public class ContactPage extends Base {
 
     public void verifySuccessfulMessage() {
         String ack = wait.until(d -> d.findElement(By.className("alert-success"))).getText();
-    assertEquals("Thanks "+fName +", we appreciate your feedback.",ack);  //checks if the successful message appears or not
+    assertEquals("Thanks "+fName +", we appreciate your feedback.",ack); //checks if the successful message appears or not
     }
 }

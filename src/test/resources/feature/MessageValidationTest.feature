@@ -1,4 +1,4 @@
-Feature: Validate the successful submission message
+Feature: Validate the successful submission message and check cart items
 
   @e2e
   Scenario Outline: Ensure that successful submission message appears after submitting contact page

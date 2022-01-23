@@ -14,11 +14,11 @@ public class CartPage extends Base {
         PageFactory.initElements(driver,this);
     }
 
-    static String cartItemTotal = "body > div.container-fluid > div > p > span.cart-count.ng-binding";
+    static String cartItemTotal = "body > div.container-fluid > div > p > span.cart-count.ng-binding"; //web element of cart page
 
     public void verifyItemsInCart(Integer num) throws InterruptedException {
         mediumWait();
-        Assert.assertEquals(num.toString(), driver.findElement(By.cssSelector(cartItemTotal)).getText()); //asserts the items in the cart or not
+        Assert.assertEquals(num.toString(), driver.findElement(By.cssSelector(cartItemTotal)).getText()); //asserts if the items present in the cart or not
     }
 
 }
