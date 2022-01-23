@@ -3,7 +3,7 @@ Feature: Validate the successful submission message
   @e2e
   Scenario Outline: Ensure that successful submission message appears after submitting contact page
     Given User clicks on contact us on homepage
-    Then  Customer submits "<ForeName>" "<Email>" "<Message>" and Successful acknowledgement messsage is displayed
+    Then  Customer submits "<ForeName>" "<Email>" "<Message>" and Successful acknowledgement message is displayed
     Examples:
       | ForeName  | Email               | Message      |
       | testUser1 | testUser1@gmail.com | testMessage1 |
@@ -15,8 +15,10 @@ Feature: Validate the successful submission message
   @e2e
   Scenario: Verifying the selected items are in the cart
     Given user clicks on shop page on homepage
-    And user adds Funny Cow 2 times
-    And user adds Fluffy bunny 1 time
+    And user add following toys in the cart:
+    | ToyName     | Quantity |
+    | FunnyCow    | 2        |
+    | FluffyBunny | 1        |
     When user click on cart menu
-    Then verify total 3 items are in cart
+    Then verify total items in cart
 
